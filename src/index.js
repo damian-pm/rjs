@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
-// import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router-dom';
-import './index.css';
+
+import './Resources/css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Home from './Component/Home'

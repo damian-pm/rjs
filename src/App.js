@@ -1,12 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import './index.scss';
-import { Link } from 'react-router-dom';
-import About from './Component/About';
+import React from 'react'
+import { Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
+import './Resources/css/App.css'
+import './Resources/css/index.scss'
+
+import logo from './Resources/svg/logo.svg'
+import About from './Component/About'
 import Home from './Component/Home'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Tools from './Component/Tools';
+import UploadFile from './Component/UploadFile/UploadFile';
 
 class App extends React.Component {
 
@@ -21,7 +24,9 @@ class App extends React.Component {
           <div className="container">
               <div className="row">
                 <div className="col-sm-12">
-                    <Link to="/home">Home</Link> - <Link to="/about">About</Link>
+                    <Link to="/home">Home</Link> -
+                    <Link to="/about">About</Link> -
+                    <Link to="/upload">UploadFile</Link>
                 </div>
               </div>
               <div className="row">
@@ -31,6 +36,7 @@ class App extends React.Component {
                 <div className="col-6">
                     <Route path="/home" component={Home} />
                     <Route path="/about" component={About} />
+                    <Route path="/upload" component={UploadFile} />
                 </div>
               </div>
           </div>
