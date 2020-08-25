@@ -9,7 +9,7 @@ import logo from './Resources/svg/logo.svg'
 import About from './Component/About'
 import Home from './Component/Home'
 import Tools from './Component/Tools';
-import UploadFile from './Component/UploadFile/UploadFile';
+import FormUploadFile from './Component/UploadFile/FormUploadFile';
 
 class App extends React.Component {
 
@@ -26,7 +26,7 @@ class App extends React.Component {
                 <div className="col-sm-12">
                     <Link to="/home">Home</Link> -
                     <Link to="/about">About</Link> -
-                    <Link to="/upload">UploadFile</Link>
+                    <Link to="/uploadForm">UploadFile</Link>
                 </div>
               </div>
               <div className="row">
@@ -36,7 +36,7 @@ class App extends React.Component {
                 <div className="col-6">
                     <Route path="/home" component={Home} />
                     <Route path="/about" component={About} />
-                    <Route path="/upload" component={UploadFile} />
+                    <Route path="/uploadForm" component={FormUploadFile} />
                 </div>
               </div>
           </div>
