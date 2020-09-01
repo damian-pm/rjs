@@ -15,18 +15,22 @@ class FormUploadFile extends React.Component {
       selectedFile: event.target.files[0],
       loaded: 0,
     })
-      // console.log(event.target.files[0])
+      console.log(event.target.files[0])
 
   }
   onClickHandler = () => {
         const data = new FormData()
         data.append('file', this.state.selectedFile)
-    axios.post("http://localhost:3000/upload", data, { 
-        // receive two    parameter endpoint url ,form data
-    })
-    .then(res => { // then print response status
-        console.log(res.statusText)
-     })
+        console.log(data)
+
+        axios.post("http://localhost:8000/upload", data, { 
+          'Access-Control-Allow-Origin': '*'
+            // receive two    parameter endpoint url ,form data
+        })
+        .then(res => { // then print response status
+            // console.log(res.status);
+            console.log('Status zaladowanego pliku:' + res.status)
+        })
     }
   render(){
     return (
