@@ -23,7 +23,7 @@ class FormUploadFile extends React.Component {
         data.append('file', this.state.selectedFile)
         console.log(data)
 
-        axios.post("http://localhost:8000/upload", data, { 
+        axios.post("123http://localhost:8000/upload", data, { 
           'Access-Control-Allow-Origin': '*'
             // receive two    parameter endpoint url ,form data
         })

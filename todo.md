@@ -4,3 +4,9 @@
 // run server
 npm run start
 ```
+
+#### Warto wiedziec
+symfony:
+ * oauth
+ * guardian
+ 
