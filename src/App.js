@@ -10,6 +10,7 @@ import About from './Component/About'
 import Home from './Component/Home'
 import Tools from './Component/Tools';
 import FormUploadFile from './Component/UploadFile/FormUploadFile';
+import image from './img/sea.jpeg';
 
 class App extends React.Component {
 
@@ -29,14 +30,21 @@ class App extends React.Component {
                     <Link to="/uploadForm">UploadFile</Link>
                 </div>
               </div>
+
+
+              <div className="row">
+                <div className="col-12">
+                    <Route path="/home" component={Home} />
+                    <Route path="/about" component={About} />
+                    <Route path="/uploadForm" component={FormUploadFile} />
+                </div>
+              </div>
               <div className="row">
                 <div className="col-4">
                   <Tools />
                 </div>
                 <div className="col-6">
-                    <Route path="/home" component={Home} />
-                    <Route path="/about" component={About} />
-                    <Route path="/uploadForm" component={FormUploadFile} />
+                  <img src={image} className="customImg"/>
                 </div>
               </div>
           </div>
