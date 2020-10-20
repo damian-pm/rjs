@@ -9,7 +9,6 @@ npm run start
 ```
 
 #### Run npm server (backend)
-run server
 ```bash
 cd ServerApp/ && npm run start
 ```

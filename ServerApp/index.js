@@ -1,8 +1,12 @@
-const express = require('express')
-const app = express()
-const cors = require('cors')
-const port = 8000
-var multer = require('multer')
+const express = require('express');
+const app = express();
+const cors = require('cors');
+const port = 8000;
+var multer = require('multer');
+
+// TODO: ta funkcja nie jest do konca dobra nie mozna jej wpiac do routera
+const uploadComponent = require('./component/uploadComponent')
+// import * as up from "./component/uploadComponent";
 
 app.use(cors())
 
@@ -20,6 +24,7 @@ var storage = multer.diskStorage({
       cb(null, Date.now() + '-' +file.originalname )
     }
 });
+
 var upload = multer({ storage: storage }).single('file')
 
 app.post('/upload', (req, res) => {
@@ -37,11 +42,7 @@ app.post('/upload', (req, res) => {
 
 app.use('/static', express.static('public'))
 
-app.get('/bright', (req, res) => {
-  // console.log(req,res)
-
-  res.json({ answer: 42 });
-});
+// app.get('/bright', uploadComponent);
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
