@@ -44,7 +44,7 @@ class App extends React.Component {
                   <Tools />
                 </div>
                 <div className="col-6">
-                  <img src={image} className="customImg"/>
+                  <img src="http://localhost:8000/static/car.png" className="customImg"/>
                 </div>
               </div>
           </div>

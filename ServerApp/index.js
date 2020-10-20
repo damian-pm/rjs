@@ -33,8 +33,16 @@ app.post('/upload', (req, res) => {
       return res.status(200).send(req.file)
     });
   // res.json({ answer: 42 });
-})
+});
+
+app.use('/static', express.static('public'))
+
+app.get('/bright', (req, res) => {
+  // console.log(req,res)
+
+  res.json({ answer: 42 });
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })

@@ -3,10 +3,13 @@
 * edit: https://vercel.com/damian-pm/rjs
 * view : https://rjs-git-master.damian-pm.vercel.app/
 
-```js
-// run server
+#### Run react (frontend)
+```bash
 npm run start
 ```
 
+#### Run npm server (backend)
 run server
-``https://github.com/damian-pm/server-ps``
+bash```
+cd ServerApp/ && npm run start
+```
